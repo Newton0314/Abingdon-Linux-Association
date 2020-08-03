@@ -1,0 +1,62 @@
+#+TITLE: Proposal for Improving the Usability of Chinese Keyboard in VI Editor
+#+AUTHOR: Frank She
+
+
+* Mechanism and Problems of the Main Stream VI-Editor (Packages) [fn:1] While Typing Chinese  
+ 
+Chinese characters can be typed normally, but vim key sequences [fn:2] can only be interpreted correctly when the keyboard is in English.
+Otherwise the keys will be typed in the pinyin entry bar as plain pinyin.
+
+** Specific Problems & Primary Thoughts on Possible Solutions
+
+Brief ideas of solutions will be attached for the known problems, further improvements will be written in a separate section.
+
+*** Definition of a 'word'
+
+**** Problems
+For instance, the lowercase '*w*', which indicates a word in Vim (presumably is defined as the region of characters around the cursor,
+until a special character or a space), whereas the uppercase '*W*' is defined as the region of characters around the cursor until a 
+space). 
+
+However, since there is barely any space in a Chinese sentence, the range of influence 'w' will be extended to the entire phrase until 
+a special character. 
+For example, if the cursor is at "哪", commands such as 'ciw' in "今天我们去哪里吃饭呀, 我也不知道" will change the whole phrase
+"今天我们去哪里吃饭呀", whereas I only want to change the phrase "哪里".
+
+**** Possible solutions
+- Solutions 1:
+'w' can be defined as the words which are entered *at once*. 
+In this example, if the sequence of entry is as follows:
+
+"今天" -> "我们" -> "去" -> "哪里" -> "吃饭" -> "呀"
+
+Since "哪里" is entered at once, the command 'ciw' will affect both "哪" and "里".
+
+- Solution 2:
+A word is defined as a combination of characters and the length of a word should be $\geq$ *2*.
+(Any changes to a single character can be done by commands such as 'xi', thus any commands with a range of influence of a 'word' doesn't
+apply to a single character).
+
+Vim should start searching both forwards & backwards around the cursor, until the combination of characters *matches* a word in the lexicon. 
+
+*** Switch between different modes  
+**** Problems
+When the keyboard is in Chinese, any vim sequences will be interpreted as normal pinyin & entered in the pinyin entry bar.
+For instance, the command 'ciw' will be literally shown as "ci'w" in the pinyin entry bar instead of change the current word.
+
+**** Possible solutions
+- An intermediate mode: \\
+Another mode (*pinyin mode*) can be introduced in addition to the normal mode & insert mode. When the escape key is pressed *once*, vim
+should firstly detect if the user is tying in the pinyin entry bar & vim shortcuts will be applied to the text/pinyin in the pinyin
+entry bar. If the user is not typing in the pinyin bar or the escape key is pressed *twice* (within a time limit), then the vim shortcuts
+will be applied to Chinese characters which has already been entered (Exactly as the normal mode).
+
+- Further improvements: \\
+Mapping key sequences (such as) which maps to escape (Actually when typing Chinese in Vim, "kj" is better than "jk" since the frequency 
+of the first letter of pinyin being "j" (approximately 7%) is higher than "k" (approximately 1.8%), whereas in English, "k" (around 0.6%)
+occurs slightly more frequently than "j" (around 0.3%) as the first letter [fn:3]).
+
+
+[fn:1] The vi-editors/packages which I have used are EVIL in Emacs, Ideavim in Pycharm and VIM
+[fn:2] esc works normally but the key sequences which remaps esc (such as jk doesn't work)
+[fn:3] Reference link: https://www.zhihu.com/question/301002333?sort=created

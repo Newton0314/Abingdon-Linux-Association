@@ -1,0 +1,145 @@
+#+TITLE:  Emacs Python Mode
+#+Author: Frank
+
+* Set up & Intro
+Please add the following lines into the .emacs file:
+
+#+begin_src elisp
+(org-babel-do-load-languages
+    'org-babel-load-languages
+	'((python . t)))
+#+end_src
+
+** Basic Commands[fn:1: https://orgmode.org/worg/org-contrib/babel/languages/ob-doc-python.html#orgc2ff2f6] (including commands for JEDI & Flycheck)
+ - C-c C-p :: staring a python shell/process (equivalent to *M-x run-python*)
+ - C-c C-c :: evaluate the current code block (equivalent to *M-x python-shell-send-buffer*)
+ - C-c ' :: staring a separate python buffer in Org mode src
+ - M-x flyckeck-list-errors :: displaying a list of errors in the current buffer    
+  
+*** Calling a function defined in another source code block [fn:2: https://orgmode.org/manual/Evaluating-Code-Blocks.html]
+ Basic syntax: 
+ #+begin_src python 
+ #+CALL: <name>(<arguments>)
+ #+CALL: <name>[<inside header arguments>](<arguments>) <end header arguments>
+ #+end_src
+
+ Note: For a source block to be called explicitly at somewhere else in the document, the source code block must be named using the 
+ syntax:
+ #+begin_src python 
+#+NAME:
+ #+end_src
+
+ For instance, this is a source code block named 'Addition'
+ #+NAME: Addition
+ #+begin_src python :result
+ t = a + b
+ return t
+ #+end_src
+
+ And we can call this source block by using the following command:
+ #+begin_src python
+ #+CALL: Addition(a=2, b=3)
+
+ #+RESULTS:
+ : 5
+ #+end_src
+
+ which returns 5
+
+
+** Importing modules 
+
+*** Problems encountered
+ When importing matplolib in emacs python source code using the following command
+
+ #+begin_src python
+ import matplotlib
+ #+end_src  
+
+ ImportError occurred
+
+*** Methods attempted
+**** Importing the modules using the absolute directory 
+*** Possible problems
+*** Solution 
+ Installing the packages from terminal using *sudo apt-get install* instead of *pip*
+
+
+* Plugins
+** JEDI (Python auto-completion)
+
+*** Installation [fn:3:http://tkf.github.io/emacs-jedi/latest/]
+
+*** Problem Encountered
+ After a new .py file is created, an error message appeared reporting "JEDI disabled in the current buffer" 
+ and I was suggested to use the command
+
+ #+begin_src 
+ M-x jedi:install-server
+ #+end_src
+
+ Another error message appears: "No program named virtualenv [fn:4:https://virtualenv.pypa.io/en/latest/]"   
+
+*** Attempts
+ I tried installing virtualenv via the terminal using 
+
+ #+begin_src shell
+ pip install virtualenv
+ #+end_src
+
+ But again, pip appears to be self-contained, thus the package can't be loaded in Emacs    
+
+*** Solutions
+ Use the following command instead  
+
+ #+begin_src shell
+ sudo apt install virtualenv
+ #+end_src
+
+
+*** Advanced Usage                                               :Unmodified:
+ - The time interval between when the user stops typing and when the auto-complete is activated
+
+**** Enabling Python Auto-completion in Org Mode Source Code Blocks
+ Use *C-c '* to start a Python buffer, and python codes can be completed as usual.
+
+
+** Flyckeck (Python syntax-checker)
+
+*** Installation [fn:5:https://www.flycheck.org/en/latest/user/installation.html]
+Please add the following codes to the .emacs or the equivalent init file
+
+#+begin_src elisp 
+(require 'package)
+
+(add-to-list 'package-archives
+             '("MELPA Stable" . "https://stable.melpa.org/packages/") t)
+(package-initialize)
+#+end_src
+
+After the repository is set up, flycheck can be installed using the commands as follows
+
+#+begin_src  
+M-x package-refresh-contents
+
+M-x package-install RET flycheck
+#+end_src
+
+After flyckeck has been installed, it can be permanently enabled by adding the following code in to the init file
+
+#+begin_src elisp
+(add-hook 'after-init-hook #'global-flycheck-mode)
+#+end_src
+
+And *language-specific* syntax checker programs can be downloaded separately. *Pylint* [fn:6:https://www.flycheck.org/en/latest/user/quickstart.html] 
+is recommended for python syntax checking and can be installed using the following command in the terminal.
+
+#+begin_src shell
+pip install pylint
+#+end_src
+
+*** Display and interaction with errors 
+- Display and list errors [fn:7:https://www.flycheck.org/en/latest/user/error-list.html]
+- Interaction with errors [fn:8:https://www.flycheck.org/en/latest/user/error-interaction.html]
+
+    

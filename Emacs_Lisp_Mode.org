@@ -1,0 +1,30 @@
+#+TITLE: Emacs Lisp & Common lisp mode
+#+AUTHOR: Frank She
+
+* Intro
+For consistency purposes, Emacs Lisp is referred as elisp and common lisp is referred as lisp from this point onwards.
+  
+** Evaluation of Code 
+- Use the following command to enter the lisp interactive environment (similar to the Python console)   
+
+#+begin_src shell
+M-x lisp-interaction-mode
+#+end_src
+
+- And run the following command in terminal to compile FILE as elisp script
+
+#+begin_src shell
+emacs --script FILE
+#+end_src
+
+Or use *M-x evaluate buffer*
+
+- Evaluating a single expression of elisp
+Place the cursor after the last closed bracket of the expression, and evaluate it using *C-j*, the results will be printed in *scratch*.
+
+Alternatively, the results will be printed in a mini-buffer using *C-x C-e*, or using *M-C-x* with the cursor inside the expression.
+
+  
+
+#  LocalWords:  elisp
+
