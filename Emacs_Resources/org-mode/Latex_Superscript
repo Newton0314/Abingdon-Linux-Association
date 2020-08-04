@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Latex_Superscript
+# key: ^
+# --
+
+{${1:Base}}^{${2:Power}} $0

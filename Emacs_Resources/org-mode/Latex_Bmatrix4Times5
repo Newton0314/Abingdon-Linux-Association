@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: Latex_Bmatrix4Times5
+# key: bmtx45
+# --
+
+\begin{bmatrix}
+  ${1:Element1} & ${5:Element5} & ${9:Element9}   & ${13:Element13} & ${17:Element17} \\\\
+  ${2:Element2} & ${6:Element6} & ${10:Element10} & ${14:Element14} & ${18:Element18} \\\\
+  ${3:Element3} & ${7:Element7} & ${11:Element11} & ${15:Element15} & ${19:Element19} \\\\
+  ${4:Element4} & ${8:Element8} & ${12:Element12} & ${16:Element16} & ${20:Element20}
+\end{bmatrix}
+$0

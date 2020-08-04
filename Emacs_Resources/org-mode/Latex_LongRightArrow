@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Latex_LongRightArrow
+# key: -->
+# --
+
+\longrightarrow $0

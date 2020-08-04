@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# Contributor: Frank (This snippet enables org-mode tables to be centered when displayed to HTML)
+# name:Emacs_Centered_Table 
+# key:ctb
+# --
+
+#+MACRO: begin_centered_contents @@html:<div align="center">@@
+#+MACRO: end_centered_contents @@html:</div>@@
+
+{{{begin_centered_contents}}}
+${1:Table}
+{{{end_centered_contents}}}

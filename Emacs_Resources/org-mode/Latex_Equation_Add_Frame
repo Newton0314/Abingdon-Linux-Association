@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# Contributor: Frank (This snippet adds a coral/orange box frame to the equations)
+# name:Latex_Equation_Add_Frame 
+# key: box
+# --
+
+\begin{equation}
+\color{coral}{
+\boxed{
+${1:}
+}}
+\end{equation}

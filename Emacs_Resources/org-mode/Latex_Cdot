@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Latex_Cdot
+# key: .
+# --
+
+\cdot $0

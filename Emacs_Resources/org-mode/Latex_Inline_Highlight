@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# Contributor: Frank(This snippet is mainly for cell/text highlighting in org-mode table)
+# name:Latex_Inline_Highlight 
+# key:icolor 
+# --
+
+$\color{${1:coral}}{\text{${2:some_texts}}}$

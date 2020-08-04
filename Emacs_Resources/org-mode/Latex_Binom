@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Latex_Binom
+# key: binom
+# --
+
+\binom{${1:Set}}{${2:Subset}} $0

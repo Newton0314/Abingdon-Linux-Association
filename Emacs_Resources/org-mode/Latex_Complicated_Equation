@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# contributor: Frank (this snippet allows the tab key to be utilised to activate other snippets while typing complicated equations)
+# name: Latex_Complicated_Equation
+# key: ceqn
+# --
+
+\begin{equation}
+${0:}
+\nonumber
+\end{equation}

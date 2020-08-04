@@ -1,0 +1,249 @@
+#+TITLE: Vim shortcut
+* Cursor op
+
+** 页跳转
+
+- gg / G :: 跳转到第一行 / 最后一行
+- C-f / b :: 向前 / 向后跳转1页
+- C-d / u :: 向前 / 向后跳转半页
+
+-----            
+
+
+** 屏幕跳转
+
+- H / M / L :: 跳转到屏幕第一行 / 中间一行 / 最后一行
+- zz / C-z :: 所在行居中
+       
+-----
+
+
+** 段落跳转
+   
+- } / { ::  跳转到段落后/ 前
+
+-----
+
+
+** 行首 & 行尾
+
+- $ :: 移动到行尾
+- g_ :: 移动到行尾
+
+-----
+
+
+** 行跳转
+
+- num + G / gg :: 跳转到 num 行
+- : + num :: 跳转到 num 行
+- num+ / - :: 向下 / 向上 num 行
+
+-----
+
+
+** 寻找              
+
+- f :: 寻找下一个字符
+
+-----
+
+
+** 向后
+
+- w / W :: 下一单词开头
+- e / E :: 单词末尾
+
+-----
+
+
+** 向前
+
+- b / B :: 上移单词开头 (对应w)
+
+-----
+
+
+* Text op
+
+** Vim insert
+
+*** 行
+
+ - o / O :: 向下 / 向上一行
+ - I / A :: 本行最后 / 最前插入
+
+*** 字符
+
+ - i / a :: 向后 / 向前插入
+ - s :: 修改
+
+-----
+ 
+
+** Vim copy
+
+*** 段
+ 
+ - yaw :: 复制整个自然段 (含换行符)
+         
+*** 行
+
+ - yy :: 复制整行
+       
+*** 单词
+
+ - yiw / yaw (带空格) :: 复制单词
+ - yw :: 复制单词cursor所在后半段
+       
+*** 字符
+
+ - yl :: 复制单个字符
+ 
+ -----
+
+
+** Vim delete
+
+*** 行
+
+ - dd :: 删除当前行
+ - cj :: 删除当前行，和下一行
+ - ck :: 删除当前行，和上一行
+ - d0 / $ :: 删除到行首 / 行尾
+ - J :: 合并当前和下一行
+       
+*** 单词
+   
+ - D :: 删除cursor所在的后半段单词
+ - dw :: 删除cursor直至下一个单词
+
+*** 字符
+
+ - X :: 删除cursor前一个字符
+ - ch :: 删除cursor前一个字符
+ - cl :: 删除cursor后一个字符
+       
+ -----
+
+
+** Vim select
+ 
+*** 选择
+
+ - V :: 行选择
+ - C-v :: 块选择
+
+*** 选中区域字符调整
+
+ - gu :: 选中区域转小写
+ - gU :: 选中区域转大写
+
+ -----
+
+ 
+* Other op
+
+** Vim  undo
+
+- u :: undo
+- C-r :: redo
+
+-----
+
+
+** Vim mark
+
+ - m :: mark
+ - ` :: return to mark
+
+*** Vim search
+
+ - / / ? :: 向后 / 向前搜索
+ - ? :: 向前搜索
+ - n / NN
+
+ 
+*** Vim file op
+
+ - ZZ :: save and quit
+
+-----
+
+
+* Some Tips
+
+** Jump flow
+   
+- Lv. paragraph
+
+    1. gg, G
+    2. C-d, C-u
+    3. H, M, L
+
+- Lv. line
+
+    4. j, k
+    5. 0, $
+   
+- Lv. char
+
+    6. f
+    7. w, b, e
+    8. h, l
+
+-----
+
+
+** Edit
+
+- Write around Head and tail
+    1. next head: wi
+    2. last head: bi
+    3. next tail: ea
+
+- Capitalize head and tail
+    1. next head: w~
+    2. last head: b~ 
+
+-----
+
+
+** Jump
+
+- Jump into / out of '()'
+    1. esc + i / kji
+    2. esc + la / kjla
+
+- Jump into '{}'
+    1. esc + i + RET + esc + O / kji + RET + kjO
+
+-----
+
+
+** Delete
+
+- Delete single word
+    1. diw (i)
+    2. daw (i)
+    3. dw
+
+- Delete words
+    1. df + char / dF + char
+    2. dt + char / dT + char
+
+- Delete in '()'
+    1. di( / di)
+
+-----
+
+* Frank's follow-up
+** File handling  
+- :e! :: Open a existing file in the VI-editor \\
+  e.g :e! .vimrc
+- :e + Space + C-d :: Display the list of file names in the current directory 
+** Common configuration of .vimrc
+- :imap jk <esc> :: Mapping 'jk' to escape
+- set guifont=Consolas:h22 :: Setting the font & font size
+- set relativenumber :: Display the relative line number
+- colorscheme desert :: Setting the color scheme to desert

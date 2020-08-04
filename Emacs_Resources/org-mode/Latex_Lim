@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Latex_Lim
+# key: lim
+# --
+
+\lim_{${1:Var} \to ${2:Limit}} $0

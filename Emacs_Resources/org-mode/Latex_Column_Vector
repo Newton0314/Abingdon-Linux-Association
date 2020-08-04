@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Latex_Column_Vector
+# Description: Frank's config
+# key: cv
+# --
+
+\colvec{${1:vectors}}

@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Latex_Subscript
+# key: _
+# --
+
+_{${1:Subscript}} $0

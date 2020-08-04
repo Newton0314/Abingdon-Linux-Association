@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# Contributor: Frank (This snippet is used for appending footnotes since the latex built-in footnote doesn't work)
+# name:Latex_Footnote 
+# key:fn 
+# --
+
+\tiny{\color{${1:red}}{${2:texts}}}

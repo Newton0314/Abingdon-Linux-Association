@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Latex_Text
+# key: t
+# --
+
+\text{${1:Text}} $0

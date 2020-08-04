@@ -1,0 +1,6 @@
+# key: latex
+# name: Latex_Source_Code_Block
+# --
+#+begin_latex latex
+${0:Latex_Content}
+#+end_latex

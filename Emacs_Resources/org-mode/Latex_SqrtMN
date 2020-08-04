@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Latex_SqrtMN
+# key: sqrtmn
+# --
+
+\sqrt{${1:Radicand}}{${2:Degree}} $0

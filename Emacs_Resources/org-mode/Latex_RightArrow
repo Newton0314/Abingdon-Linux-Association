@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Latex_RightArrow
+# key: ->
+# --
+
+\rightarrow $0

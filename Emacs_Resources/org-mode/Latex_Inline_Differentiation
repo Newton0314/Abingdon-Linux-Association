@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name:Latex_Inline_Differentiation 
+# Contributor: Frank (This snippet displays dy/dx as well as the $$ sign)
+# key: idydx 
+# --
+
+$\frac{dy}{dx} {${1:Expression}}$

@@ -1,0 +1,33 @@
+#+TITLE: Emacs Haskell Mode
+#+AUTHOR: Frank She
+
+* Installation [fn:1:https://github.com/haskell/haskell-mode]
+Please see this link for mode details. 
+
+https://github.com/haskell/haskell-mode
+
+Note that melpa package might be failed to download and *M-x package-refresh-contents* might take a while to contact to the host
+
+* Haskell Mode 
+** Intro 
+Haskell mode have the following modes:
+- haskell-mode (supports syntax highlight, auto-indent etc)
+- interactive-haskell-mode (using the Haskell ghci, which is an interactive interpreter similar to python)
+
+The entire file can be compiled using the command *runhaskell myfile.hs* in the terminal
+
+
+** Key Bindings & Shortcuts [fn:2:https://wiki.haskell.org/Emacs/Keybindings_and_simple_usage]
+Please see this link for more details 
+
+https://wiki.haskell.org/Emacs/Keybindings_and_simple_usage
+
+
+** Compilation of .hs Files [fn:3:https://wiki.haskell.org/Haskell_in_5_steps]
+Use the following command in the terminal to compile it 
+
+#+begin_src shell
+ghc -o hello myfile.hs
+#+end_src
+
+And then run the executable ./hello

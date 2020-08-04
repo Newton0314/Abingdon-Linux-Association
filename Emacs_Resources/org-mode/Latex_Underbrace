@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Latex_Underbrace
+# key: underbrace
+# --
+
+\underbrace{${1:From} \dots ${2:To}}_{${3:Number}} $0

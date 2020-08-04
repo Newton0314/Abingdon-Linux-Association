@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# contributor: Frank
+# name: Latex_Sub_Equations
+# key: subeqn
+# --
+
+\begin{equation}
+${1:eqn} \left\{
+\begin{array}{lr}
+    ${2:subeqn}
+\end{array}
+\right.
+\end{equation}

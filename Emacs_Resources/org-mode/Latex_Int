@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Latex_Int
+# key: int
+# --
+
+\displaystyle \int_{${1:LowerBound}}^{${2:UpperBound}} $0

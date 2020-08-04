@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# Contributor: Frank (This snippet resizes the inserted images in emacs)
+# name: Emacs_Image_Resize 
+# key: size
+# --
+
+#+ARRT_latex: :width 200
+#+ATTR_HTML: :width 350
+#+ATTR_ORG: :width 350

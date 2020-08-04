@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# Contributor: Frank
+# name:Latex_Beta 
+# key: b 
+# --
+
+\beta ${1:}

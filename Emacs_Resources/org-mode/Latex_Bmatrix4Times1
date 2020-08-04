@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: Latex_Bmatrix4Times1
+# key: bmtx41
+# --
+
+\begin{bmatrix}
+  ${1:Element1} \\\\
+  ${2:Element2} \\\\
+  ${3:Element3} \\\\
+  ${4:Element4}
+\end{bmatrix}
+$0

@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Latex_LongRightArrowBold
+# key: ==>
+# --
+
+\Longrightarrow $0

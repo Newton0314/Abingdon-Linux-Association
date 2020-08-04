@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Latex_Sum
+# key: s
+# --
+
+\displaystyle \sum_{${1:i = 1}}^{${2:UpperBound}} $0

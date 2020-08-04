@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# contributor: Frank (This snippet allows simple inline fractions to be typed more effectively)
+# name: Latex_Inline_Fraction 
+# key: ifr
+# --
+
+$\frac{${1:}}{${2:}}$

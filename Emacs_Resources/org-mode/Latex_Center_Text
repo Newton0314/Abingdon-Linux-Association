@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# contributor: Frank
+# name:Latex_Center_Text 
+# key:center 
+# --
+
+#+BEGIN_CENTER
+${1:text}
+#+END_CENTER
+${0:}

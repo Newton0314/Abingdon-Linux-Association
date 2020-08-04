@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: Latex_Eqnarray
+# key: eqnarray
+# --
+
+\begin{eqnarray}
+${1:Eqns}
+\end{eqnarray}
+$0

@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Latex_Transpose
+# key: T
+# --
+
+{${1:Matrix}}^\mathrm{T} $0

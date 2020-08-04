@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Latex_Differentiation 
+# Contributor: Frank (This snippet displayes the first derivative dy/dx)
+# key: dydx
+# --
+
+\frac{dy}{dx} ${1:{expression}}

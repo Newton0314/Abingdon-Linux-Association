@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: Latex_Bmatrix3Times2
+# key: bmtx32
+# --
+
+\begin{bmatrix}
+  ${1:Element1} & ${4:Element4} \\\\
+  ${2:Element2} & ${5:Element5} \\\\
+  ${3:Element3} & ${6:Element6}
+\end{bmatrix}
+$0

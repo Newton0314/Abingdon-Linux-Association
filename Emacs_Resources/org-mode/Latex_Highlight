@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Latex_highlight
+# key: color
+# --
+
+{\color{${1:color_name}}{\text{${2:text}}} $0

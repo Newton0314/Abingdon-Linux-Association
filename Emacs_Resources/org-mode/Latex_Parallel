@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Latex_Parallel
+# key: parallel
+# --
+
+\parallel ${1:Vector} \parallel $0

@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: Latex_Bmatrix5Times5
+# key: bmtx55
+# --
+
+\begin{bmatrix}
+  ${1:Element1} & ${06:Element6}  & ${11:Element11} & ${16:Element16} & ${21:Element21} \\\\
+  ${2:Element2} & ${07:Element7}  & ${12:Element12} & ${17:Element17} & ${22:Element22} \\\\
+  ${3:Element3} & ${08:Element8}  & ${13:Element13} & ${18:Element18} & ${23:Element23} \\\\
+  ${4:Element4} & ${09:Element9}  & ${14:Element14} & ${19:Element19} & ${24:Element24} \\\\
+  ${5:Element5} & ${10:Element10} & ${15:Element15} & ${20:Element20} & ${25:Element25}
+\end{bmatrix}
+$0

@@ -1,8 +1,3 @@
----
-title: Preamble
-author: Frank She
----
-
 # Welcome!
 
 A Very Warm Welcome to the **Abingdon Linux Association** [^1]!

@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Latex_Qquad
+# key: qquad
+# --
+
+\qquad $0

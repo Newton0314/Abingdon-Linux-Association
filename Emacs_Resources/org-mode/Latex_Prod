@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Latex_Prod
+# key: prod
+# --
+
+\displaystyle \prod_{${1:LowerBound}}^{${2:UpperBound}} $0

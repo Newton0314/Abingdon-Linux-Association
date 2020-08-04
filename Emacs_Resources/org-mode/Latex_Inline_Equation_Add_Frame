@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name:Latex_Inline_Equation_Add_Frame 
+# key:ibox 
+# --
+
+\color{coral}{
+\boxed{
+${1:}
+}}

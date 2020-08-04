@@ -1,0 +1,24 @@
+# key: Binom
+# name: Python_Binomial_Distribution_Plot
+# --
+import matplotlib.pyplot as plt
+import numpy as np
+from scipy import stats
+def ${1:Binomial_Distribution}(k_lower, k_upper, n, p):
+    """
+    k = the number of success
+    n = the number of trials
+    p = the probability of success
+    """
+    k = np.arange(k_lower, k_upper)
+    print(k)
+    print('*' * 20)
+    binomial = stats.binom.pmf(k, n, p)
+    plt.plot(k, binomial, 'o-')
+    plt.title('${2:Title}')
+    plt.xlabel('${3:x-label}')
+    plt.ylabel('${4:y-label}')
+    plt.grid(True)
+    plt.savefig('/home/frank/Documents/Org/L6 Further Maths Notes Consolidation/L6 Statistics/binom_emacs.jpg')
+print(binomial_graph(${5:arguments}))
+${0:}

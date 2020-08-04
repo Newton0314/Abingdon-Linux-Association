@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: Latex_Bmatrix1Times3
+# key: bmtx13
+# --
+
+\begin{bmatrix}
+  ${1:Element1} & ${2:Element2} & ${3:Element3}
+\end{bmatrix}
+$0

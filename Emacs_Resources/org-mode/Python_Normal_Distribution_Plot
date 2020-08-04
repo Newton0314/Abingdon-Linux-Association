@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# Contributor: Frank (Graph plotting for a normal distribution)
+# name: Python_Normal_Distribution_Plot
+# key:Norm 
+# --
+
+def ${1:Function_Name}(mu, variance, filename):
+    std = variance ** 0.5
+    x = np.linspace(mu - 5 * std, mu + 5 * std, 100)
+    plt.title('${2:Title}')
+    plt.xlabel('${3:x_label}')
+    plt.ylabel('${4:Probability density}')
+    plt.plot(x, stats.norm.pdf(x, mu, std))
+    plt.grid(True, alpha=0.4)
+    plt.savefig(f'/home/frank/Documents/Org/L6 Further Maths Notes Consolidation/L6 Statistics/{filename}.png', dpi=100)

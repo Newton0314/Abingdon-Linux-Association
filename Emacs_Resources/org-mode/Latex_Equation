@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: Latex_Equation
+# key: eqn
+# --
+
+\begin{equation}
+${1:Eqns}
+\end{equation}
+$0

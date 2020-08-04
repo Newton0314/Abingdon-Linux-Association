@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# Contirbutor: Frank (Snippet for naming inserted images and figures)
+# name:Latex_Image_Naming 
+# key: fig
+# --
+
+$$
+\displaystyle \textit{Fig ${1:}}
+$$

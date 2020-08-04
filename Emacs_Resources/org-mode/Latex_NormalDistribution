@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Latex_NormalDistribution
+# key: N
+# --
+
+\mathcal N $0

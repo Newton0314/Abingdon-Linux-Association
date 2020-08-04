@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# Contributor: Frank (This snippet displays an inline integral template as well as the $$ sign)
+# name: Latex_Inline_Int 
+# key: iint 
+# --
+
+$\displaystyle \int_{${1:LowerBound}}^{${2:UpperBound}} ${3:eqn}$

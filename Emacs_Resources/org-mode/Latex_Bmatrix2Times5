@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: Latex_Bmatrix2Times5
+# key: bmtx25
+# --
+
+\begin{bmatrix}
+  ${1:Element1} & ${3:Element3} & ${5:Element5} & ${7:Element7} & ${9:Element9} \\\\
+  ${2:Element2} & ${4:Element4} & ${6:Element6} & ${8:Element8} & ${10:Element10}
+\end{bmatrix}
+$0

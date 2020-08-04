@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Latex_Inverse
+# key: -1
+# --
+
+{${1:Base}}^{-1} $0

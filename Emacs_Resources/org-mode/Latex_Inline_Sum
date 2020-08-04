@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# Contributor: Frank (This snippet displays a sum template as well as the $$ sign)
+# name: Latex_Inline_Sum 
+# key: isum 
+# --
+
+$\displaystyle \sum_{${1:i = 1}}^{${2:UpperBound}} ${3:eqn}$

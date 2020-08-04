@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Latex_Permutation
+# key: P
+# --
+
+_{${1:Set}}P_{${2:Subset}} $0

@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Latex_ContentInLine
+# key: $
+# --
+
+$${1:Eqn}$ $0

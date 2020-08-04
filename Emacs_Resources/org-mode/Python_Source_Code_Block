@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# Contributor: Frank (Since 's' is binded to Latex_Sum, thus the built-in <s can't expand the source block)
+# name:Python_Source_Code_Block 
+# key:py 
+# --
+
+#+begin_src python 
+${1:Python_Code}
+#+end_src
+

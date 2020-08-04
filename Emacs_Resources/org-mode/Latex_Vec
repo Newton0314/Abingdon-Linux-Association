@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Latex_Vec
+# key: vec
+# --
+
+\vec{${1:Vector}} $0
