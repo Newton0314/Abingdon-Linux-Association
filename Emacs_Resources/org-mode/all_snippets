@@ -2,6 +2,7 @@
 # Co-Author: Fred Yu
 
 # List of snippets:
+"""
 Latex_Eqnarray
 Emacs_Centered_Table         Latex_Equation
 Emacs_Image_Resize           Latex_Equation_Add_Frame
@@ -45,6 +46,7 @@ Latex_ContentBetweenLines    Latex_Vec
 Latex_ContentInLine          Python_Binomial_Distribution_Plot
 Latex_Differentiation        Python_Normal_Distribution_Plot
 Latex_Div                    Python_Source_Code_Block
+"""
 
 
 # -*- mode: snippet -*-
