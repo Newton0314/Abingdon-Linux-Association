@@ -1,0 +1,1008 @@
+# Author: Frank She
+# Co-Author: Fred Yu
+
+# List of snippets:
+Latex_Eqnarray
+Emacs_Centered_Table         Latex_Equation
+Emacs_Image_Resize           Latex_Equation_Add_Frame
+Latex_Footnote
+Latex_Align.txt              Latex_Fraction
+Latex_Bar                    Latex_Highlight
+Latex_Beta                   Latex_Image_Naming
+Latex_Binom                  Latex_Inline_Differentiation
+Latex_Bmatrix1Times1         Latex_Inline_Equation_Add_Frame
+Latex_Bmatrix1Times2         Latex_Inline_Fraction
+Latex_Bmatrix1Times3         Latex_Inline_Highlight
+Latex_Bmatrix1Times4         Latex_Inline_Int
+Latex_Bmatrix1Times5         Latex_Inline_Sum
+Latex_Bmatrix2Times1         Latex_Int
+Latex_Bmatrix2Times2         Latex_Intersection
+Latex_Bmatrix2Times3         Latex_Inverse
+Latex_Bmatrix2Times4         Latex_Lim
+Latex_Bmatrix2Times5         Latex_LongRightArrow
+Latex_Bmatrix3Times1         Latex_LongRightArrowBold
+Latex_Bmatrix3Times2         Latex_NormalDistribution
+Latex_Bmatrix3Times3         Latex_Overbrace
+Latex_Bmatrix3Times4         Latex_Parallel
+Latex_Bmatrix3Times5         Latex_Permutation
+Latex_Bmatrix4Times1         Latex_Prod
+Latex_Bmatrix4Times2         Latex_Qquad
+Latex_Bmatrix4Times3         Latex_RightArrow
+Latex_Bmatrix4Times4         Latex_RightArrowBold
+Latex_Bmatrix4Times5         Latex_Source_Code_Block
+Latex_Bmatrix5Times1         Latex_Sqrt
+Latex_Bmatrix5Times2         Latex_SqrtMN
+Latex_Bmatrix5Times3         Latex_Sub_Equations
+Latex_Bmatrix5Times4         Latex_Subscript
+Latex_Bmatrix5Times5         Latex_Sum.txt
+Latex_Cases                  Latex_Superscript
+Latex_Cdot                   Latex_Text
+Latex_Cdots                  Latex_Times
+Latex_Center_Text            Latex_Transpose
+Latex_Column_Vector          Latex_Underbrace
+Latex_Complicated_Equation   Latex_Union
+Latex_ContentBetweenLines    Latex_Vec
+Latex_ContentInLine          Python_Binomial_Distribution_Plot
+Latex_Differentiation        Python_Normal_Distribution_Plot
+Latex_Div                    Python_Source_Code_Block
+
+
+# -*- mode: snippet -*-
+# Contributor: Frank (This snippet enables org-mode tables to be centered when displayed to HTML)
+# name:Emacs_Centered_Table 
+# key:ctb
+# --
+
+#+MACRO: begin_centered_contents @@html:<div align="center">@@
+#+MACRO: end_centered_contents @@html:</div>@@
+{{{begin_centered_contents}}}
+${1:Table}
+{{{end_centered_contents}}}
+
+
+
+# -*- mode: snippet -*-
+# Contributor: Frank (This snippet resizes the inserted images in emacs)
+# name: Emacs_Image_Resize 
+# key: size
+# --
+
+#+ARRT_latex: :width 200
+#+ATTR_HTML: :width 350
+#+ATTR_ORG: :width 350
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Align
+# key: align
+# --
+
+\begin{align}
+${1:Eqns}
+\end{align}
+$0
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Bar
+# key: bar
+# --
+\bar{${1:Var}} $0
+
+
+
+# -*- mode: snippet -*-
+# Contributor: Frank
+# name:Latex_Beta 
+# key: b 
+# --
+
+\beta ${1:}# -*- mode: snippet -*-
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Binom
+# key: binom
+# --
+
+\binom{${1:Set}}{${2:Subset}} $0# -*- mode: snippet -*-
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Bmatrix1Times1
+# key: bmtx11
+# --
+
+\begin{bmatrix}
+  ${1:Element}
+\end{bmatrix}$0
+
+
+
+#-*- mode: snippet -*-
+# name: Latex_Bmatrix1Times2
+# key: bmtx12
+# --
+
+\begin{bmatrix}
+  ${1:Element1} & ${2:Element2}
+\end{bmatrix}$0
+
+
+# -*- mode: snippet -*-
+# name: Latex_Bmatrix1Times3
+# key: bmtx13
+# --
+
+\begin{bmatrix}
+  ${1:Element1} & ${2:Element2} & ${3:Element3}
+\end{bmatrix}$0
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Bmatrix1Times4
+# key: bmtx14
+# --
+
+\begin{bmatrix}
+  ${1:Element1} & ${2:Element2} & ${3:Element3} & ${4:Element4}
+\end{bmatrix}$0
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Bmatrix1Times5
+# key: bmtx15
+# --
+
+\begin{bmatrix}
+  ${1:Element1} & ${2:Element2} & ${3:Element3} & ${4:Element4} & ${5:Element5}
+\end{bmatrix}
+$0
+
+
+# -*- mode: snippet -*-
+# name: Latex_Bmatrix2Times1
+# key: bmtx21
+# --
+
+\begin{bmatrix}
+  ${1:Element1} \\\\
+  ${2:Element2}
+\end{bmatrix}
+$0
+
+
+# -*- mode: snippet -*-
+# name: Latex_Bmatrix2Times2
+# key: m22
+# --
+
+\begin{bmatrix}
+  ${1:Element1} & ${3:Element3} \\\\
+  ${2:Element2} & ${4:Element4}
+\end{bmatrix}
+$0
+
+
+# -*- mode: snippet -*-
+# name: Latex_Bmatrix2Times3
+# key: 
+# --
+
+\begin{bmatrix}
+  ${1:Element1} & ${3:Element3} & ${5:Element5} \\\\
+  ${2:Element2} & ${4:Element4} & ${6:Element6}
+\end{bmatrix}
+$0
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Bmatrix2Times4
+# key: 
+# --
+
+\begin{bmatrix}
+  ${1:Element1} & ${3:Element3} & ${5:Element5} & ${7:Element7} \\\\
+  ${2:Element2} & ${4:Element4} & ${6:Element6} & ${8:Element8}
+\end{bmatrix}
+$0
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Bmatrix2Times5
+# key: bmtx25
+# --
+
+\begin{bmatrix}
+  ${1:Element1} & ${3:Element3} & ${5:Element5} & ${7:Element7} & ${9:Element9} \\\\
+  ${2:Element2} & ${4:Element4} & ${6:Element6} & ${8:Element8} & ${10:Element10}
+\end{bmatrix}
+$0
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Bmatrix3Times1
+# key: bmtx31
+# --
+
+\begin{bmatrix}
+  ${1:Element1} \\\\
+  ${2:Element2} \\\\
+  ${3:Element3}
+\end{bmatrix}
+$0
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Bmatrix3Times2
+# key: bmtx32
+# --
+
+\begin{bmatrix}
+  ${1:Element1} & ${4:Element4} \\\\
+  ${2:Element2} & ${5:Element5} \\\\
+  ${3:Element3} & ${6:Element6}
+\end{bmatrix}
+$0
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Bmatrix3Times3
+# key: bmtx33
+# --
+
+\begin{bmatrix}
+  ${1:Element1} & ${3:Element4} & ${7:Element7} \\\\
+  ${2:Element2} & ${4:Element5} & ${8:Element8} \\\\
+  ${3:Element3} & ${6:Element6} & ${9:Element9}
+\end{bmatrix}
+$0
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Bmatrix3Times4
+# key: bmtx34
+# --
+
+\begin{bmatrix}
+  ${1:Element1} & ${3:Element4} & ${7:Element7} & ${10:Element10} \\\\
+  ${2:Element2} & ${4:Element5} & ${8:Element8} & ${11:Element11} \\\\
+  ${3:Element3} & ${6:Element6} & ${9:Element9} & ${12:Element12}
+\end{bmatrix}
+$0
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Bmatrix3Times5
+# key: bmtx35
+# --
+
+\begin{bmatrix}
+  ${1:Element1} & ${3:Element4} & ${7:Element7} & ${10:Element10} & ${13:Element13} \\\\
+  ${2:Element2} & ${4:Element5} & ${8:Element8} & ${11:Element11} & ${14:Element14} \\\\
+  ${3:Element3} & ${6:Element6} & ${9:Element9} & ${12:Element12} & ${15:Element15}
+\end{bmatrix}
+$0
+
+
+# -*- mode: snippet -*-
+# name: Latex_Bmatrix4Times1
+# key: bmtx41
+# --
+
+\begin{bmatrix}
+  ${1:Element1} \\\\
+  ${2:Element2} \\\\
+  ${3:Element3} \\\\
+  ${4:Element4}
+\end{bmatrix}
+$0
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Bmatrix4Times2
+# key: bmtx42
+# --
+
+\begin{bmatrix}
+  ${1:Element1} & ${5:Element5} \\\\
+  ${2:Element2} & ${6:Element6} \\\\
+  ${3:Element3} & ${7:Element7} \\\\
+  ${4:Element4} & ${8:Element8}
+\end{bmatrix}
+$0
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Bmatrix4Times3
+# key: bmtx43
+# --
+
+\begin{bmatrix}
+  ${1:Element1} & ${5:Element5} & ${9:Element9}   \\\\
+  ${2:Element2} & ${6:Element6} & ${10:Element10} \\\\
+  ${3:Element3} & ${7:Element7} & ${11:Element11} \\\\
+  ${4:Element4} & ${8:Element8} & ${12:Element12}
+\end{bmatrix}
+$0
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Bmatrix4Times4
+# key: bmtx44
+# --
+
+\begin{bmatrix}
+  ${1:Element1} & ${5:Element5} & ${9:Element9}   & ${13:Element13} \\\\
+  ${2:Element2} & ${6:Element6} & ${10:Element10} & ${14:Element14} \\\\
+  ${3:Element3} & ${7:Element7} & ${11:Element11} & ${15:Element15} \\\\
+  ${4:Element4} & ${8:Element8} & ${12:Element12} & ${16:Element16}
+\end{bmatrix}
+$0
+
+
+# -*- mode: snippet -*-
+# name: Latex_Bmatrix4Times5
+# key: bmtx45
+# --
+
+\begin{bmatrix}
+  ${1:Element1} & ${5:Element5} & ${9:Element9}   & ${13:Element13} & ${17:Element17} \\\\
+  ${2:Element2} & ${6:Element6} & ${10:Element10} & ${14:Element14} & ${18:Element18} \\\\
+  ${3:Element3} & ${7:Element7} & ${11:Element11} & ${15:Element15} & ${19:Element19} \\\\
+  ${4:Element4} & ${8:Element8} & ${12:Element12} & ${16:Element16} & ${20:Element20}
+\end{bmatrix}
+$0
+
+
+# -*- mode: snippet -*-
+# name: Latex_Bmatrix5Times1
+# key: bmtx51
+# --
+
+\begin{bmatrix}
+  ${1:Element1} \\\\
+  ${2:Element2} \\\\
+  ${3:Element3} \\\\
+  ${4:Element4} \\\\
+  ${5:Element5}
+\end{bmatrix}
+$0
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Bmatrix5Times2
+# key: bmtx52
+# --
+
+\begin{bmatrix}
+  ${1:Element1} & ${6:Element6} \\\\
+  ${2:Element2} & ${7:Element7} \\\\
+  ${3:Element3} & ${8:Element8} \\\\
+  ${4:Element4} & ${9:Element9} \\\\
+  ${5:Element5} & ${10:Element10}
+\end{bmatrix}
+$0
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Bmatrix5Times3
+# key: bmtx53
+# --
+
+\begin{bmatrix}
+  ${1:Element1} & ${6:Element6}   & ${11:Element11} \\\\
+  ${2:Element2} & ${7:Element7}   & ${12:Element12} \\\\
+  ${3:Element3} & ${8:Element8}   & ${13:Element13} \\\\
+  ${4:Element4} & ${9:Element9}   & ${14:Element14} \\\\
+  ${5:Element5} & ${10:Element10} & ${15:Element15}
+\end{bmatrix}
+$0
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Bmatrix5Times4
+# key: bmtx54
+# --
+
+\begin{bmatrix}
+  ${1:Element1} & ${06:Element6}  & ${11:Element11} & ${16:Element16} \\\\
+  ${2:Element2} & ${07:Element7}  & ${12:Element12} & ${17:Element17} \\\\
+  ${3:Element3} & ${08:Element8}  & ${13:Element13} & ${18:Element18} \\\\
+  ${4:Element4} & ${09:Element9}  & ${14:Element14} & ${19:Element19} \\\\
+  ${5:Element5} & ${10:Element10} & ${15:Element15} & ${20:Element20}
+\end{bmatrix}
+$0
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Bmatrix5Times5
+# key: bmtx55
+# --
+
+\begin{bmatrix}
+  ${1:Element1} & ${06:Element6}  & ${11:Element11} & ${16:Element16} & ${21:Element21} \\\\
+  ${2:Element2} & ${07:Element7}  & ${12:Element12} & ${17:Element17} & ${22:Element22} \\\\
+  ${3:Element3} & ${08:Element8}  & ${13:Element13} & ${18:Element18} & ${23:Element23} \\\\
+  ${4:Element4} & ${09:Element9}  & ${14:Element14} & ${19:Element19} & ${24:Element24} \\\\
+  ${5:Element5} & ${10:Element10} & ${15:Element15} & ${20:Element20} & ${25:Element25}
+\end{bmatrix}
+$0
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Cases
+# key: cases
+# --
+
+\begin{cases}
+${1:Eqns}
+\end{cases}
+$0
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Cdot
+# key: .
+# --
+
+\cdot $0
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Cdots
+# key: ...
+# --
+
+\cdots $0
+
+
+
+# -*- mode: snippet -*-
+# contributor: Frank
+# name:Latex_Center_Text 
+# key:center 
+# --
+
+#+BEGIN_CENTER
+${1:text}
+#+END_CENTER
+${0:}
+
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Column_Vector
+# Description: Frank's config
+# key: cv
+# --
+
+\colvec{${1:vectors}}
+
+
+
+# -*- mode: snippet -*-
+# contributor: Frank (this snippet allows the tab key to be utilised to activate other snippets while typing complicated equations)
+# name: Latex_Complicated_Equation
+# key: ceqn
+# --
+
+\begin{equation}
+${0:}
+\nonumber
+\end{equation}
+
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_ContentBetweenLines
+# key: $$
+# --
+
+$$
+$0
+$$
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_ContentInLine
+# key: $
+# --
+
+$${1:Eqn}$ $0
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Differentiation 
+# Contributor: Frank (This snippet displayes the first derivative dy/dx)
+# key: dydx
+# --
+
+\frac{dy}{dx} ${1:{expression}}
+
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Div
+# key: /
+# --
+
+\div $0
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Eqnarray
+# key: eqnarray
+# --
+
+\begin{eqnarray}
+${1:Eqns}
+\end{eqnarray}
+$0
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Equation
+# key: eqn
+# --
+
+\begin{equation}
+${1:Eqns}
+\end{equation}
+$0
+
+
+
+# -*- mode: snippet -*-
+# Contributor: Frank (This snippet adds a coral/orange box frame to the equations)
+# name:Latex_Equation_Add_Frame 
+# key: box
+# --
+
+\begin{equation}
+\color{coral}{
+\boxed{
+${1:}
+}}
+\end{equation}
+
+
+
+# -*- mode: snippet -*-
+# Contributor: Frank (This snippet is used for appending footnotes since the latex built-in footnote doesn't work)
+# name:Latex_Footnote 
+# key:fn 
+# --
+
+\tiny{\color{${1:red}}{${2:texts}}}
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Fraction
+# key: fr
+# --
+
+\frac{${1:Numerator}}{${2:Denominator}} $0
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_highlight
+# key: color
+# --
+
+{\color{${1:color_name}}{\text{${2:text}}} $0
+
+
+
+# -*- mode: snippet -*-
+# Contirbutor: Frank (Snippet for naming inserted images and figures)
+# name:Latex_Image_Naming 
+# key: fig
+# --
+
+$$
+\displaystyle \textit{Fig ${1:}}
+$$
+
+
+
+# -*- mode: snippet -*-
+# name:Latex_Inline_Differentiation 
+# Contributor: Frank (This snippet displays dy/dx as well as the $$ sign)
+# key: idydx 
+# --
+
+$\frac{dy}{dx} {${1:Expression}}$
+
+
+
+# -*- mode: snippet -*-
+# name:Latex_Inline_Equation_Add_Frame 
+# key:ibox 
+# --
+
+\color{coral}{
+\boxed{
+${1:}
+}}
+
+
+
+# -*- mode: snippet -*-
+# contributor: Frank (This snippet allows simple inline fractions to be typed more effectively)
+# name: Latex_Inline_Fraction 
+# key: ifr
+# --
+
+$\frac{${1:}}{${2:}}$
+
+
+
+# -*- mode: snippet -*-
+# Contributor: Frank(This snippet is mainly for cell/text highlighting in org-mode table)
+# name:Latex_Inline_Highlight 
+# key:icolor 
+# --
+
+$\color{${1:coral}}{\text{${2:some_texts}}}$
+
+
+
+# -*- mode: snippet -*-
+# Contributor: Frank (This snippet displays an inline integral template as well as the $$ sign)
+# name: Latex_Inline_Int 
+# key: iint 
+# --
+
+$\displaystyle \int_{${1:LowerBound}}^{${2:UpperBound}} ${3:eqn}$
+
+
+
+# -*- mode: snippet -*-
+# Contributor: Frank (This snippet displays a sum template as well as the $$ sign)
+# name: Latex_Inline_Sum 
+# key: isum 
+# --
+
+$\displaystyle \sum_{${1:i = 1}}^{${2:UpperBound}} ${3:eqn}$
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Int
+# key: int
+# --
+
+\displaystyle \int_{${1:LowerBound}}^{${2:UpperBound}} $0
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Intersection
+# key: n
+# --
+
+\cap $0
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Inverse
+# key: -1
+# --
+
+{${1:Base}}^{-1} $0
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Lim
+# key: lim
+# --
+
+\lim_{${1:Var} \to ${2:Limit}} $0
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_LongRightArrow
+# key: -->
+# --
+
+\longrightarrow $0
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_LongRightArrowBold
+# key: ==>
+# --
+
+\Longrightarrow $0
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_NormalDistribution
+# key: N
+# --
+
+\mathcal N $0
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Overbrace
+# key: overbrace
+# --
+
+\overbrace{${1:From} \dots ${2:To}}^{${3:Number}} $0
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Parallel
+# key: parallel
+# --
+
+\parallel ${1:Vector} \parallel $0
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Permutation
+# key: P
+# --
+
+_{${1:Set}}P_{${2:Subset}} $0
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Prod
+# key: prod
+# --
+
+\displaystyle \prod_{${1:LowerBound}}^{${2:UpperBound}} $0
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Qquad
+# key: qquad
+# --
+
+\qquad $0
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_RightArrow
+# key: ->
+# --
+
+\rightarrow $0
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_RightArrowBold
+# key: =>
+# --
+
+\Rightarrow$0# key: latex
+# name: Latex_Source_Code_Block
+# --
+
+#+begin_latex latex
+${0:Latex_Content}
+#+end_latex
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Sqrt
+# key: sqrt
+# --
+
+\sqrt{${1:Radicand}} $0
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_SqrtMN
+# key: sqrtmn
+# --
+
+\sqrt{${1:Radicand}}{${2:Degree}} $0
+
+
+
+# -*- mode: snippet -*-
+# contributor: Frank
+# name: Latex_Sub_Equations
+# key: subeqn
+# --
+
+\begin{equation}
+${1:eqn} \left\{
+\begin{array}{lr}
+    ${2:subeqn}
+\end{array}
+\right.
+\end{equation}
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Subscript
+# key: _
+# --
+
+_{${1:Subscript}} $0
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Sum
+# key: s
+# --
+
+\displaystyle \sum_{${1:i = 1}}^{${2:UpperBound}} $0
+
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Superscript
+# key: ^
+# --
+
+{${1:Base}}^{${2:Power}} $0
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Text
+# key: t
+# --
+
+\text{${1:Text}} $0
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Times
+# key: x
+# --
+
+\times $0
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Transpose
+# key: T
+# --
+
+{${1:Matrix}}^\mathrm{T} $0
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Underbrace
+# key: underbrace
+# --
+
+\underbrace{${1:From} \dots ${2:To}}_{${3:Number}} $0
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Union
+# key: u
+# --
+
+\cup $0
+
+
+
+# -*- mode: snippet -*-
+# name: Latex_Vec
+# key: vec
+# --
+
+\vec{${1:Vector}} $0
+
+
+
+# -*- mode: snippet -*-
+# key: Binom
+# name: Python_Binomial_Distribution_Plot
+# --
+import matplotlib.pyplot as plt
+import numpy as np
+from scipy import stats
+def ${1:Binomial_Distribution}(k_lower, k_upper, n, p):
+    """
+    k = the number of success
+    n = the number of trials
+    p = the probability of success
+    """
+    k = np.arange(k_lower, k_upper)
+    print(k)
+    print('*' * 20)
+    binomial = stats.binom.pmf(k, n, p)
+    plt.plot(k, binomial, 'o-')
+    plt.title('${2:Title}')
+    plt.xlabel('${3:x-label}')
+    plt.ylabel('${4:y-label}')
+    plt.grid(True)
+    plt.savefig('/home/frank/Documents/Org/L6 Further Maths Notes Consolidation/L6 Statistics/binom_emacs.jpg')
+print(binomial_graph(${5:arguments}))
+${0:}
+
+
+
+# -*- mode: snippet -*-
+# Contributor: Frank (Graph plotting for a normal distribution)
+# name: Python_Normal_Distribution_Plot
+# key:Norm 
+# --
+
+def ${1:Function_Name}(mu, variance, filename):
+    std = variance ** 0.5
+    x = np.linspace(mu - 5 * std, mu + 5 * std, 100)
+    plt.title('${2:Title}')
+    plt.xlabel('${3:x_label}')
+    plt.ylabel('${4:Probability density}')
+    plt.plot(x, stats.norm.pdf(x, mu, std))
+    plt.grid(True, alpha=0.4)
+    plt.savefig(f'/home/frank/Documents/Org/L6 Further Maths Notes Consolidation/L6 Statistics/{filename}.png', dpi=100)
+
+
+
+
+# -*- mode: snippet -*-
+# Contributor: Frank (Since 's' is binded to Latex_Sum, thus the built-in <s can't expand the source block)
+# name:Python_Source_Code_Block 
+# key:py 
+# --
+
+#+begin_src python 
+${1:Python_Code}
+#+end_src
+
+" The file ends here
