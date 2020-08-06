@@ -1,53 +1,6 @@
 # Author: Frank She
 # Co-Author: Fred Yu
 
-# List of snippets:
-"""
-Latex_Eqnarray
-Emacs_Centered_Table         Latex_Equation
-Emacs_Image_Resize           Latex_Equation_Add_Frame
-Latex_Footnote
-Latex_Align.txt              Latex_Fraction
-Latex_Bar                    Latex_Highlight
-Latex_Beta                   Latex_Image_Naming
-Latex_Binom                  Latex_Inline_Differentiation
-Latex_Bmatrix1Times1         Latex_Inline_Equation_Add_Frame
-Latex_Bmatrix1Times2         Latex_Inline_Fraction
-Latex_Bmatrix1Times3         Latex_Inline_Highlight
-Latex_Bmatrix1Times4         Latex_Inline_Int
-Latex_Bmatrix1Times5         Latex_Inline_Sum
-Latex_Bmatrix2Times1         Latex_Int
-Latex_Bmatrix2Times2         Latex_Intersection
-Latex_Bmatrix2Times3         Latex_Inverse
-Latex_Bmatrix2Times4         Latex_Lim
-Latex_Bmatrix2Times5         Latex_LongRightArrow
-Latex_Bmatrix3Times1         Latex_LongRightArrowBold
-Latex_Bmatrix3Times2         Latex_NormalDistribution
-Latex_Bmatrix3Times3         Latex_Overbrace
-Latex_Bmatrix3Times4         Latex_Parallel
-Latex_Bmatrix3Times5         Latex_Permutation
-Latex_Bmatrix4Times1         Latex_Prod
-Latex_Bmatrix4Times2         Latex_Qquad
-Latex_Bmatrix4Times3         Latex_RightArrow
-Latex_Bmatrix4Times4         Latex_RightArrowBold
-Latex_Bmatrix4Times5         Latex_Source_Code_Block
-Latex_Bmatrix5Times1         Latex_Sqrt
-Latex_Bmatrix5Times2         Latex_SqrtMN
-Latex_Bmatrix5Times3         Latex_Sub_Equations
-Latex_Bmatrix5Times4         Latex_Subscript
-Latex_Bmatrix5Times5         Latex_Sum.txt
-Latex_Cases                  Latex_Superscript
-Latex_Cdot                   Latex_Text
-Latex_Cdots                  Latex_Times
-Latex_Center_Text            Latex_Transpose
-Latex_Column_Vector          Latex_Underbrace
-Latex_Complicated_Equation   Latex_Union
-Latex_ContentBetweenLines    Latex_Vec
-Latex_ContentInLine          Python_Binomial_Distribution_Plot
-Latex_Differentiation        Python_Normal_Distribution_Plot
-Latex_Div                    Python_Source_Code_Block
-"""
-
 
 # -*- mode: snippet -*-
 # Contributor: Frank (This snippet enables org-mode tables to be centered when displayed to HTML)
