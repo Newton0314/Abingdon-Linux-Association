@@ -1,11 +1,18 @@
-;; Author: Frank SHe
+;;; package --- Summary
+;;; Commentary:
+
+;; Author: Frank She
 ;; Co-Author: Fred Yu
+;; Repository: https://github.com/Newton0314/Abingdon-Linux-Association/blob/master/Emacs_Resources/.emacs
+
+
+;;; Code:
 
 ;; Others configs which were put here due to overrides
 
-    ;; pyim: set eng. punctuation
+    ;; pyim: set eng. punctuation (Chinese input method )
 
-(setq pyim-punctuation-translate-p '(no yes auto))   ;使用半角标点。
+(setq pyim-punctuation-translate-p '(no yes auto))  ;Use halfwidth punctuations
 
 ;; -----
 
@@ -111,22 +118,21 @@
 
     ;; Auto save
 
-(setq-default auto-save-timeout 15) ; 15秒无动作,自动保存
-(setq-default auto-save-interval 200) ; 200个字符间隔, 自动保存
-
+(setq-default auto-save-timeout 15)  ; Auto-save if inactive for 15 seconds
+(setq-default auto-save-interval 200)  ; Auto-save every 200 characters
 
     ;; Auto backup
 
 (setq
-     backup-by-copying t ; 自动备份
+     backup-by-copying t  ; Auto-backup
      backup-directory-alist
-     '(("." . "~/Documents/Backup")) ; 自动备份在目录"~/.em_backup"下
-     delete-old-versions t ; 自动删除旧的备份文件
-     kept-new-versions 3 ; 保留最近的3个备份文件
-     kept-old-versions 1 ; 保留最早的1个备份文件
-     version-control t) ; 多次备份
+     '(("." . "~/Documents/Backup")) ; Auto-backup under the directory "~/.em_backup"
+     delete-old-versions t ; Auto-delete the previous backup
+     kept-new-versions 3 ;Keep the 3 latest backups
+     kept-old-versions 1 ;Keep the oldest backup
+     version-control t) ; Allow multiple backups
 
-;; (setq backup-by-copying t) ;使用复制模式备份文件
+;; (setq backup-by-copying t)
 
 
     ;; Org mode export dir according to suffix
@@ -218,7 +224,8 @@ There are two things you can do about this warning:
  '(org-html-head "<style type=\"text/css\">body{margin:100px}</style>")
  '(package-selected-packages
    (quote
-    (markdown-mode yasnippet posframe pyim winum elfeed-org elfeed org-brain helm magit plantuml-mode company evil-escape emms htmlize org-pomodoro ox-reveal evil monokai-theme))))
+    (markdown-mode yasnippet posframe pyim winum elfeed-org elfeed org-brain helm magit plantuml-mode company evil-escape
+				   emms htmlize org-pomodoro ox-reveal evil monokai-theme))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -246,7 +253,7 @@ There are two things you can do about this warning:
 (evil-mode 1)
 
 
-    ;; evil-escape
+    ;; evil-escape (Frank's config)
 
 (add-hook 'org-mode-hook 'evil-escape-mode)
 
@@ -310,14 +317,15 @@ There are two things you can do about this warning:
 
     ;; plantuml-mode
 
-;; active Org-babel languages
+;; active Org-babel languages (Frank's config)
 (org-babel-do-load-languages
     'org-babel-load-languages
       '(;; other Babel languages
 	   (python . t)
 	   (latex . t)
        (lisp . t)
-           (plantuml . t)))
+	   (shell .t)
+       (plantuml . t)))
 
 (setq org-plantuml-jar-path
       (expand-file-name "~/plantuml.jar"))
@@ -390,7 +398,7 @@ There are two things you can do about this warning:
 ;; (setf url-queue-timeout 30)
 
 
-    ;; pyim
+    ;; pyim (Chinese input method, please ignore this part if you are an English user)
 
 (use-package pyim
   :ensure nil
@@ -437,13 +445,14 @@ There are two things you can do about this warning:
    (("M-j" . pyim-convert-string-at-point) ;与 pyim-probe-dynamic-english 配合
    ("C-;" . pyim-delete-word-from-personal-buffer)))
 
+
 ;; Highlight latex text in org mode (Frank's config)
 (setq org-highlight-latex-and-related ' (latex))
 
-;; syntax highlight inserted code (Frank's config) 
+;; syntax highlight inserted code (Frank's config)
 (setq org-src-fontify-natively t)
 
-;; auto-matching parenthesis (Frank's config)   
+;; auto-matching parenthesis (Frank's config)
 (electric-pair-mode t)
 (show-paren-mode t)
 
@@ -456,7 +465,7 @@ There are two things you can do about this warning:
 
 
 ;; org mode latex preview (Frank's config)
-;; The first command is for earlier versions of org mode  
+;; The first command is for earlier versions of org mode
 ;;(setq org-latex-create-formula-image-program 'dvipng)
 (setq org-preview-latex-default-process 'dvipng)
 
@@ -467,7 +476,7 @@ There are two things you can do about this warning:
 
 ;; setting the default browser as firefox (Frank's config)
 (setq org-file-apps
-    (quote 
+    (quote
 	((auto-mode .emacs)
 	("\\.mm\'" . default)
 	("\\.x?html?\\'" . "/usr/bin/firefox %s")
@@ -482,11 +491,11 @@ There are two things you can do about this warning:
 ;; (add-to-list 'org-latex-package-alist '("" "footnote"))
 
 ;; Setting color for the 'consolidation' tag (Frank's config)
-;; not working at the moment
+;; Only working under org-mode at the moment, the configured color is not shown in html export
 (require 'org)
-(setq org-tag-persistent-alist 
+(setq org-tag-persistent-alist
       '((:startgroup . nil)
-        ("CONSOLIDATION" . ?c) 
+        ("CONSOLIDATION" . ?c)
         (:endgroup . nil)
         )
 )
@@ -495,7 +504,7 @@ There are two things you can do about this warning:
       '(
         ("CONSOLIDATION" . (:foreground "red" :weight bold))
         )
-)     
+)
 
 
 ;; Org file export as Markdown (Frank's config)
@@ -522,5 +531,7 @@ There are two things you can do about this warning:
 
 (require 'org-tempo)
 
-;; ------
 
+;; ------
+(provide ' .emacs)
+;;; .emacs ends here
