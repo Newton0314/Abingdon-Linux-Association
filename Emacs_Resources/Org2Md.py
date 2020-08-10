@@ -1,3 +1,6 @@
+# Author: Frank She
+# Repository: https://github.com/Newton0314/Abingdon-Linux-Association/blob/master/Emacs_Resources/Org2Md.py
+
 """
 Please using the following link to generate the table of contents
 https://ecotrust-canada.github.io/markdown-toc/
@@ -48,33 +51,17 @@ def src(line):
     """
     global in_latex_block
     global in_maths_block
+
     if re.match("#\+begin_src python|#\+BEGIN_SRC python", line):
         line = "```python\n"
-    elif re.match("#\+begin_latex latex", line):
-        """
-        if in_maths_block == 0:
-            in_latex_block = 1
-            line = "```latex\n"
-        elif in_maths_block == 1:
-            line = ''
-        """
+    elif re.match("#\+begin_latex latex", line) or re.match("#\+end_latex", line):
         line = ''
     elif re.match("#\+end_src|#\+END_SRC", line):
         line = "```\n"
-    elif re.match("#\+end_latex", line):
-        """
-        if in_maths_block == 0:
-            in_latex_block = 0
-            line = "```\n"
-        elif in_maths_block == 1:
-            line = ''
-        """
-        line = ''
     return line
 
 
 def latex_to_maths(line):
-    # if re.match("\\begin{equation}", line):
     line = line.replace("\\begin{equation}", "$$")
     line = line.replace("\\end{equation}", "$$")
     return line
@@ -123,10 +110,8 @@ def parser(f_name_in, f_name_out):
     print("Start parsing...")
 
     for each_line in f_in:
-        each_line = latex_to_maths(each_line)
-        each_line = header(each_line)
-        each_line = src(each_line)
-        each_line = table(each_line)
+        each_line = table(src(header(latex_to_maths(each_line))))
+
         if line_num < 5:  # preamble is highly unlikely to be more than 5 lines
             """
             Note that the preamble is converted after the header since the header 
@@ -146,7 +131,7 @@ if __name__ == "__main__":
     print("Please Enter the Input File Name (name.org): ")
     filename_in = str(input()) + ".org"
     filename_out = f"{filename_in.replace('.org', '')}_markdown copy.md"
-    # the Md file will be saved in the same parent folder
+    # The Md file will be saved in the same parent folder
     print("=============================")
     print(f"Input Filename: {filename_in}")
     print(f"Output Filename: {filename_out}")
@@ -154,9 +139,5 @@ if __name__ == "__main__":
     print("=============================")
 
 """"————————————————
-Reference link: something
-//blog.csdn.net/abcamus/java/article/details/53738481
-/home/frank/Documents/Org/Temp Files/Org to be converted
-/home/frank/Documents/Org/Conversion of Hand-Written Formulas to Latex Syntax/Primary ideas of the project
+Reference link: //blog.csdn.net/abcamus/java/article/details/53738481
 """
-
